@@ -94,10 +94,10 @@ ggplot(czas_nauki, aes(x = Aktywnosc, y = Godziny, fill = Aktywnosc)) +
 ::: {.column width="50%"}
 Podróżowanie to mój sposób na:
 
--   🌍 Poznawanie nowych kultur
--   📸 Fotografię krajobrazową
--   🍜 Odkrywanie lokalnej kuchni
--   🧘 Odpoczynek od ekranów
+-   Poznawanie nowych kultur
+-   Fotografię krajobrazową
+-   Odkrywanie lokalnej kuchni
+-   Odpoczynek od ekranów
 :::
 
 ::: {.column width="50%"}
@@ -131,7 +131,7 @@ ggplot(kraje, aes(x = Kraj, y = Wizyty)) +
 <!-- uklad trzech kolumn po 33% kazdej -->
 :::::: columns
 ::: {.column width="33%"}
-### 🏔️ Góry
+### Góry
 
 ![](assets/gory.jpg)
 
@@ -139,7 +139,7 @@ Sudety, Karkonosze
 :::
 
 ::: {.column width="33%"}
-### 🏖️ Morze
+### Morze
 
 ![](assets/plaza.jpg)
 
@@ -147,7 +147,7 @@ Chorwacja, Grecja
 :::
 
 ::: {.column width="33%"}
-### 🏛️ Miasta
+### Miasta
 
 ![](assets/miasto.jpg)
 
@@ -159,10 +159,10 @@ Rzym, Barcelona
 
 <!-- lista z animacja - elementy pojawiaja sie po kolei -->
 ::: incremental
--   📱 **Aplikacje podróżnicze** - tworzę własne narzędzia do planowania
--   📊 **Analiza danych** - analizuję ceny lotów i hoteli
--   📍 **Mapy i GPS** - projekty z wykorzystaniem danych geograficznych
--   💻 **Praca zdalna** - mogę kodować z każdego miejsca na świecie
+-   **Aplikacje podróżnicze** - tworzę własne narzędzia do planowania
+-   **Analiza danych** - analizuję ceny lotów i hoteli
+-   **Mapy i GPS** - projekty z wykorzystaniem danych geograficznych
+-   **Praca zdalna** - mogę kodować z każdego miejsca na świecie
 :::
 
 ## Statystyki moich podróży
@@ -191,7 +191,7 @@ ggplot(podroze, aes(x = Rok, y = Liczba_wyjazdow)) +
 <!-- porownanie dwoch pasji w kolumnach -->
 ::::: columns
 ::: {.column width="50%"}
-### 💻 IT
+### IT
 
 -   Nieustanny rozwój
 -   Praktyczne projekty
@@ -200,7 +200,7 @@ ggplot(podroze, aes(x = Rok, y = Liczba_wyjazdow)) +
 :::
 
 ::: {.column width="50%"}
-### ✈️ Podróże
+### Podróże
 
 -   Nowe doświadczenia
 -   Inspiracja do projektów
@@ -217,11 +217,11 @@ ggplot(podroze, aes(x = Rok, y = Liczba_wyjazdow)) +
 ::: {.column width="60%"}
 ### Kontakt
 
--   🔗 GitHub: github.com/KAJT0S
+-   GitHub: github.com/KAJT0S
 
 <!-- link powrotny do strony glownej -->
 
-[🏠 Powrót do strony głównej](index.html)
+[Powrót do strony głównej](index.html)
 :::
 
 ::: {.column width="40%"}
