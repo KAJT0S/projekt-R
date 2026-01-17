@@ -1,17 +1,35 @@
+# nazwa projektu workflowr
 name: "strona_R_Kajetan_Kapusta"
+
+# folder wyjsciowy dla wygenerowanych plikow html
 output_dir: ../docs
+
+# konfiguracja paska nawigacji
 navbar:
   title: "strona_R_Kajetan_Kapusta"
+  # linki po lewej stronie
   left:
-  - text: Home
-    href: index.html
-  - text: About
-    href: about.html
-  - text: License
-    href: license.html
+    - text: "Home"
+      href: index.html
+    - text: "CV"
+      href: cv.html
+    - text: "Analiza Danych"
+      href: analiza.html
+    - text: "Prezentacja"
+      href: prezentacja.html
+      target: "_blank"        # otwiera w nowej karcie
+  # ikona github po prawej stronie
+  right:
+    - icon: fa-github
+      href: https://github.com/KAJT0S/projekt-R
+
+# globalne ustawienia wyjscia html
 output:
   workflowr::wflow_html:
-    toc: yes
-    toc_float: yes
-    theme: cosmo
-    highlight: textmate
+    toc: yes                  # spis tresci
+    toc_float: yes            # plywajacy spis tresci
+    theme: flatly             # motyw
+    highlight: textmate       # kolorowanie skladni kodu
+    css: assets/font.css      # wlasny plik css z czcionka
+    suppress_report: true     # ukrycie przycisku workflowR
+

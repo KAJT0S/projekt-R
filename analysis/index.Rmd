@@ -1,11 +1,38 @@
 ---
-title: "Home"
+title: "Strona Główna"
 site: workflowr::wflow_site
 output:
   workflowr::wflow_html:
     toc: false
-editor_options:
-  chunk_output_type: console
 ---
 
-Welcome to my research website.
+<!-- naglowek yaml: tytul strony, typ witryny workflowr, brak spisu tresci -->
+
+<!-- naglowek h2 - powitanie -->
+
+## Witaj na mojej stronie!
+
+<!-- krotki opis - pogrubienia za pomoca ** -->
+
+Nazywam się **Kajetan Kapusta** i jestem studentem kierunku **Informatyka i Inżynieria Danych** na Uniwersytecie Przyrodniczym w Poznaniu.
+
+
+Na tej stronie znajdziesz:
+
+- Moje CV
+- Przykładowe analizy danych w R
+- Prezentacje o moich zainteresowaniach
+
+<!-- linia pozioma --- -->
+
+---
+
+<!-- naglowek h3 i obrazek w skladni markdown -->
+
+### Moja uczelnia
+
+![Uniwersytet Przyrodniczy w Poznaniu](assets/uczelnia.png)
+
+<!-- cytat blokowy -->
+
+> *"Strona wykonana w technologii **workflowr**"*

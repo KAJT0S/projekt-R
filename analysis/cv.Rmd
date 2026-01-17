@@ -1,0 +1,142 @@
+---
+title: "Curriculum Vitae"
+author: "Kajetan Kapusta"
+output: 
+  workflowr::wflow_html:
+    toc: true
+    toc_float: true
+---
+
+<!-- naglowek yaml: tytul, autor, format wyjsciowy z plywajacym spisem tresci -->
+
+# Kajetan Kapusta
+
+**Informatyka i Inżynieria Danych | Student**
+
+Jestem komunikatywną osobą, bardzo szybko się uczę, nie jest mi straszne podejmowanie nowych wyzwań oraz praca w grupie jest dla mnie bliska. Cechuje mnie sumienność w wykonywaniu swoich obowiązków, rzetelność oraz wysoka kultura osobista.
+
+---
+
+<!-- tabela markdown z danymi kontaktowymi -->
+
+## Dane kontaktowe
+
+| | |
+|:--|:--|
+| **Email:** | kajkap04@gmail.com |
+| **Telefon:** | +48 123 456 789 |
+| **Lokalizacja:** | Poznań, Polska |
+| **Data urodzenia:** | 10.01.1999 |
+| **GitHub:** | [github.com/KAJT0S](https://github.com/KAJT0S) |
+| **LinkedIn:** | [linkedin.com/in/kajetan-kapusta](https://www.linkedin.com/in/kajetan-kapusta-451324304/) |
+
+---
+
+<!-- sekcja wyksztalcenia - naglowek h3 i lista -->
+
+## Wykształcenie
+
+### Uniwersytet Przyrodniczy w Poznaniu
+**Okres:** 10.2023 – obecnie
+
+- **Kierunek:** Informatyka i inżynieria danych  
+- **Poziom wykształcenia:** studia inżynierskie (I stopień)
+
+---
+
+<!-- sekcja doswiadczenia zawodowego z zagniezdzonymi listami -->
+
+## Doświadczenie zawodowe
+
+### Praktykant – Jeronimo Martins Polska S.A.
+**Okres:** 07.2025 – 08.2025 | **Lokalizacja:** Kostrzyn
+
+- Optymalizacja oraz dokumentacja techniczna narzędzia do analizy dużych zbiorów danych w Pythonie
+- Tworzenie gotowych raportów w Excelu, refaktoryzacja kodu
+- Praca z Dockerem – tworzenie i uruchamianie kontenerów z aplikacją lokalnie
+- Praca w narzędziach: Jira, Service Desk
+- Analiza systemu HR:
+  - Frontend: architektura React, Zustand
+  - Backend: C#, PostgreSQL, Microsoft SQL Server
+
+### Obsługa kina – Cinema City Kinepolis
+**Okres:** 07.2024 – obecnie | **Lokalizacja:** Poznań
+
+- Obsługa klientów: sprzedaż biletów, udzielanie informacji
+- Dbanie o komfort widzów i porządek w salach kinowych
+- Przygotowywanie i sprzedaż przekąsek oraz napojów
+
+---
+
+<!-- sekcja umiejetnosci podzielona na kategorie -->
+
+## Umiejętności
+
+### Języki programowania
+
+- **Python** – pandas, NumPy, matplotlib
+- **R** – ggplot2, dplyr, tidyr
+- **SQL** – PostgreSQL, podstawy Microsoft SQL Server
+- **C#** – podstawy
+- **HTML/CSS** – podstawy tworzenia stron
+
+### Narzędzia i technologie
+
+- Docker
+- Git & GitHub/GitLab
+- Jira & Service Desk
+- VS Code, RStudio
+- DBeaver
+
+### Frameworki i biblioteki
+
+- React (podstawy)
+- Apache Airflow
+- workflowr, Quarto
+- R Markdown
+
+### Kompetencje miękkie
+
+- Praca w zespole
+- Szybka nauka
+- Zarządzanie czasem
+- Odpowiedzialność
+- Komunikatywność
+
+---
+
+<!-- sekcja projektow z linkami do github -->
+
+## Projekty
+
+### Strona Portfolio – workflowr
+
+Osobista strona internetowa z portfolio i analizami danych, stworzona przy użyciu pakietu workflowr w R. Zawiera analizy danych, wizualizacje oraz prezentację umiejętności.
+
+**Technologie:** R, workflowr, R Markdown, ggplot2
+
+[Zobacz na GitHub](https://github.com/KAJT0S/projekt-R)
+
+### Predykcja cen mieszkań | projekt Machine Learning
+
+- Opracowanie modelu regresyjnego do predykcji cen nieruchomości przy użyciu XGBoost i Random Forest.
+
+- Wdrożenie pełnego potoku danych: od czyszczenia i statystycznego usuwania outlierów (Z-score), po optymalizację modelu (GridSearchCV).
+
+- Uzyskanie wysokiej precyzji predykcji potwierdzonej analizą residuów i walidacją krzyżową.
+
+**Technologie:** Python, pandas, matplotlib, Jupyter Notebook
+
+[Zobacz na GitHub](https://github.com/KAJT0S/house-price-prediction-ml)
+
+### Analiza europejskiego rynku lotniczego | Data Science & Statystyka
+
+- Przeprowadzenie kompleksowej analizy rynku lotniczego w Europie z wykorzystaniem statystyki wielowymiarowej (ANOVA, MANOVA, Analiza czynnikowa EFA).
+
+- Wykonanie segmentacji tras lotniczych przy użyciu algorytmu K-Means oraz budowa modeli regresyjnych (Random Forest) do predykcji cen biletów.
+
+**Technologie:** Scikit-learn, Statsmodels, FactorAnalyzer, Python
+
+[Zobacz na GitHub](https://github.com/KAJT0S/european-airline-market-analysis)
+
+---

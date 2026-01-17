@@ -1,0 +1,102 @@
+---
+title: "Analiza zbioru danych MPG"
+output: workflowr::wflow_html
+---
+
+<!-- naglowek yaml: tytul i format wyjsciowy workflowr -->
+
+## 1. Opis zbioru danych
+
+
+W tej sekcji analizuję zbiór `mpg`, który zawiera dane o zużyciu paliwa przez popularne modele samochodów w latach 1999-2008.
+
+<!-- chunk r: message i warning = FALSE ukrywa komunikaty w konsoli -->
+
+```{r setup, message=FALSE, warning=FALSE}
+# ladowanie biblioteki tidyverse
+library(tidyverse)
+
+# wczytanie zbioru danych mpg
+data("mpg")
+
+# podglad pierwszych wierszy
+head(mpg)
+```
+
+
+
+## 2. Przetwarzanie danych (dplyr)
+
+Wybieramy auta nowsze niż rok 2000 i tworzymy nową kolumnę z wydajnością.
+
+<!-- uzycie operatora pipe %>% do laczenia operacji dplyr -->
+
+```{r processing, message=FALSE, warning=FALSE}
+# przetwarzanie danych: filtrowanie, nowa kolumna, grupowanie i agregacja
+dane_przetworzone <- mpg %>%
+  filter(year > 2000) %>%
+  mutate(wydajnosc = cty + hwy) %>%
+  group_by(class) %>%
+  summarise(srednia_wydajnosc = mean(wydajnosc),
+            liczba_aut = n())
+
+print(dane_przetworzone)
+```
+
+
+
+## 3. Wizualizacja (ggplot2)
+
+<!-- wykres slupkowy - geom_col -->
+
+### Wykres 1: Słupkowy (Bar plot)
+
+Średnia wydajność w zależności od klasy auta.
+
+```{r wykres1, message=FALSE, warning=FALSE}
+# wykres slupkowy - porownanie wydajnosci miedzy klasami aut
+ggplot(dane_przetworzone, aes(x = reorder(class, srednia_wydajnosc), y = srednia_wydajnosc)) +
+  geom_col(fill = "steelblue") +
+  theme_minimal() +
+  labs(title = "Srednia wydajnosc paliwowa wg klasy auta",
+       x = "Klasa samochodu",
+       y = "Srednia wydajnosc (miasto + trasa)")
+```
+
+**Wnioski:** Najwyższą wydajność paliwową mają samochody kompaktowe (compact) i subcompact, co wynika z ich mniejszej masy i mniejszych silników. Najgorzej wypadają pickupy i SUV-y, które ze względu na większą masę i napęd 4x4 zużywają znacznie więcej paliwa.
+
+<!-- wykres punktowy - geom_point z linia regresji geom_smooth -->
+
+### Wykres 2: Punktowy/Liniowy (Scatter plot)
+
+Zależność pojemności silnika od spalania w mieście.
+
+```{r wykres2, message=FALSE, warning=FALSE}
+# wykres punktowy z linia trendu - zaleznosc pojemnosci od spalania
+ggplot(mpg, aes(x = displ, y = cty, color = class)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title = "Pojemnosc silnika a spalanie w miescie",
+       x = "Pojemnosc silnika (L)",
+       y = "Mile na galon (miasto)")
+```
+
+**Wnioski:** Widać wyraźną negatywną korelację – im większa pojemność silnika, tym niższa wydajność paliwowa (mniej mil na galon). Samochody z silnikami powyżej 5L osiągają zaledwie 10-15 mpg w mieście, podczas gdy auta z małymi silnikami (ok. 2L) mogą osiągać nawet 25-35 mpg.
+
+<!-- boxplot - geom_boxplot pokazuje rozklad danych -->
+
+### Wykres 3: Boxplot
+
+Rozkład spalania na autostradzie dla różnych napędów.
+
+```{r wykres3, message=FALSE, warning=FALSE}
+# boxplot - rozklad spalania dla roznych typow napedu
+ggplot(mpg, aes(x = drv, y = hwy, fill = drv)) +
+  geom_boxplot() +
+  scale_fill_brewer(palette = "Pastel1") +
+  labs(title = "Spalanie na autostradzie wg napedu",
+       x = "Rodzaj napedu (f = przod, r = tyl, 4 = 4x4)",
+       y = "Mile na galon (hwy)")
+```
+
+**Wnioski:** Samochody z napędem na przednią oś (f) są najbardziej oszczędne na autostradzie, z medianą około 28 mpg. Napęd 4x4 jest najmniej ekonomiczny (mediana ok. 17 mpg) ze względu na dodatkowe straty mechaniczne. Napęd na tył (r) plasuje się pośrodku, ale wykazuje największe zróżnicowanie wyników.

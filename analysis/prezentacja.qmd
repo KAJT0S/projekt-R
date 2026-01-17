@@ -1,0 +1,230 @@
+---
+title: "Moje Pasje: IT & Podróże"
+subtitle: "Prezentacja o zainteresowaniach"
+author: "Kajetan Kapusta"
+format: 
+  revealjs:                 # format prezentacji revealjs
+    theme: moon             # motyw kolorystyczny
+    transition: concave     # animacja przejscia miedzy slajdami
+    slide-number: true      # numeracja slajdow
+    embed-resources: true   # osadzenie zasobow w pliku html
+    footer: "Kajetan Kapusta - Informatyka i Inżynieria Danych"
+editor: visual
+execute:
+  echo: true                # pokazywanie kodu r
+  warning: false            # ukrywanie ostrzezen
+---
+
+## O mnie
+
+<!-- uklad dwukolumnowy: 60% tekst, 40% obrazek -->
+::::: columns
+::: {.column width="60%"}
+Cześć! Nazywam się **Kajetan**.
+
+Studiuję **Informatykę i Inżynierię Danych**.
+
+W tej prezentacji pokażę, jak łączę dwie skrajne pasje: kodowanie (IT) i podróżowanie.
+:::
+
+::: {.column width="40%"}
+![](../docs/assets/uczelnia.png)
+:::
+:::::
+
+## Pasja 1: Świat IT
+
+Moja przygoda z komputerami zaczęła się wcześnie. Obecnie skupiam się na:
+
+-   Analizie danych (Data Science)
+-   Programowaniu Python
+-   Tworzeniu pracy inżynierskiej (Python, Flutter)
+
+## Wykres 1: Moje umiejętności
+
+Poniższy wykres wygenerowałem w R, aby zobrazować mój poziom zaawansowania w różnych technologiach.
+
+```{r}
+#| output-location: slide
+# wykres pojawi sie na nastepnym slajdzie
+
+library(ggplot2)
+
+# dane - poziom umiejetnosci w roznych technologiach
+skills <- data.frame(
+  Technologia = c("R", "Python", "SQL", "HTML/CSS", "Git"),
+  Poziom = c(50, 80, 70, 50, 80)
+)
+
+# wykres slupkowy
+ggplot(skills, aes(x = Technologia, y = Poziom)) +
+  geom_col(fill = "steelblue") +
+  theme_minimal() +
+  labs(title = "Moj Stack Technologiczny", 
+       x = "Technologia", 
+       y = "Poziom (%)")
+```
+
+## Czas poświęcony na naukę IT
+
+```{r}
+#| output-location: slide
+
+# dane - rozklad czasu w tygodniu
+czas_nauki <- data.frame(
+  Aktywnosc = c("Programowanie", "Kursy online", "Projekty wlasne", "Dokumentacja", "Uczelnia"),
+  Godziny = c(15, 8, 10, 5, 7)
+)
+
+# wykres slupkowy z kolorami wg aktywnosci
+ggplot(czas_nauki, aes(x = Aktywnosc, y = Godziny, fill = Aktywnosc)) +
+  geom_col() +
+  theme_minimal() +
+  labs(title = "Tygodniowy rozklad czasu na IT", 
+       x = "", 
+       y = "Godziny") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "none")
+```
+
+## Pasja 2: Podróżowanie
+
+<!-- uklad dwukolumnowy: lista i zdjecie -->
+::::: columns
+::: {.column width="50%"}
+Podróżowanie to mój sposób na:
+
+-   🌍 Poznawanie nowych kultur
+-   📸 Fotografię krajobrazową
+-   🍜 Odkrywanie lokalnej kuchni
+-   🧘 Odpoczynek od ekranów
+:::
+
+::: {.column width="50%"}
+![Podróże to moja pasja](assets/podroze.jpg)
+:::
+:::::
+
+## Moje odwiedzone miejsca
+
+```{r}
+#| output-location: slide
+
+# dane - liczba wizyt w krajach
+kraje <- data.frame(
+  Kraj = c("Polska", "Niemcy", "Wlochy", "Hiszpania", "Grecja", "Chorwacja", "Austria"),
+  Wizyty = c(50, 5, 3, 2, 2, 4, 3)
+)
+
+# poziomy wykres slupkowy
+ggplot(kraje, aes(x = Kraj, y = Wizyty)) +
+  geom_col(fill = "darkgreen") +
+  coord_flip() +
+  theme_minimal() +
+  labs(title = "Liczba wizyt w roznych krajach", 
+       x = "", 
+       y = "Liczba wizyt")
+```
+
+## Ulubione destynacje
+
+<!-- uklad trzech kolumn po 33% kazdej -->
+:::::: columns
+::: {.column width="33%"}
+### 🏔️ Góry
+
+![](assets/gory.jpg)
+
+Sudety, Karkonosze
+:::
+
+::: {.column width="33%"}
+### 🏖️ Morze
+
+![](assets/plaza.jpg)
+
+Chorwacja, Grecja
+:::
+
+::: {.column width="33%"}
+### 🏛️ Miasta
+
+![](assets/miasto.jpg)
+
+Rzym, Barcelona
+:::
+::::::
+
+## Jak łączę IT z podróżami?
+
+<!-- lista z animacja - elementy pojawiaja sie po kolei -->
+::: incremental
+-   📱 **Aplikacje podróżnicze** - tworzę własne narzędzia do planowania
+-   📊 **Analiza danych** - analizuję ceny lotów i hoteli
+-   📍 **Mapy i GPS** - projekty z wykorzystaniem danych geograficznych
+-   💻 **Praca zdalna** - mogę kodować z każdego miejsca na świecie
+:::
+
+## Statystyki moich podróży
+
+```{r}
+#| output-location: slide
+
+# dane - liczba wyjazdow w latach
+podroze <- data.frame(
+  Rok = c(2021, 2022, 2023, 2024, 2025),
+  Liczba_wyjazdow = c(3, 5, 7, 8, 6)
+)
+
+# wykres liniowy z punktami
+ggplot(podroze, aes(x = Rok, y = Liczba_wyjazdow)) +
+  geom_line(color = "blue", size = 1) +
+  geom_point(color = "darkblue", size = 3) +
+  theme_minimal() +
+  labs(title = "Moje podroze w latach 2021-2025", 
+       x = "Rok", 
+       y = "Liczba wyjazdow")
+```
+
+## Podsumowanie
+
+<!-- porownanie dwoch pasji w kolumnach -->
+::::: columns
+::: {.column width="50%"}
+### 💻 IT
+
+-   Nieustanny rozwój
+-   Praktyczne projekty
+-   Praca z danymi
+-   Tworzenie rozwiązań
+:::
+
+::: {.column width="50%"}
+### ✈️ Podróże
+
+-   Nowe doświadczenia
+-   Inspiracja do projektów
+-   Work-life balance
+-   Poznawanie świata
+:::
+:::::
+
+> *"Najlepsze jest połączenie obu pasji - analiza danych o podróżach i kodowanie z widokiem na góry!"*
+
+## Dziękuję za uwagę!
+
+::::: columns
+::: {.column width="60%"}
+### Kontakt
+
+-   🔗 GitHub: github.com/KAJT0S
+
+<!-- link powrotny do strony glownej -->
+
+[🏠 Powrót do strony głównej](index.html)
+:::
+
+::: {.column width="40%"}
+![](assets/uczelnia.png)
+:::
+:::::
