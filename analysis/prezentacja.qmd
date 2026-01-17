@@ -225,6 +225,6 @@ ggplot(podroze, aes(x = Rok, y = Liczba_wyjazdow)) +
 :::
 
 ::: {.column width="40%"}
-![](assets/uczelnia.png)
+![](../docs/assets/uczelnia.png)
 :::
 :::::

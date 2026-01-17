@@ -31,7 +31,7 @@ Na tej stronie znajdziesz:
 
 ### Moja uczelnia
 
-![Uniwersytet Przyrodniczy w Poznaniu](assets/uczelnia.png)
+![Uniwersytet Przyrodniczy w Poznaniu](../docs/assets/uczelnia.png)
 
 <!-- cytat blokowy -->
 
